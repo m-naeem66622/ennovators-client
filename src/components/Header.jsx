@@ -20,9 +20,13 @@ function Header() {
 
   return (
     <Navbar
-      classNames={{ base: "py-3 bg-transparent", wrapper: "max-w-[1440px]" }}
+      classNames={{
+        base: "sm:py-4",
+        wrapper: "max-w-[1440px] md:px-[76px]",
+      }}
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
+      isBordered
     >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
@@ -30,15 +34,15 @@ function Header() {
         />
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden pr-3" justify="center">
+      <NavbarContent className="sm:hidden" justify="center">
         <NavbarBrand>
-          <Logo className="w-52" />
+          <Logo className="w-32" />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="start">
         <NavbarBrand>
-          <Logo className="w-52" />
+          <Logo className="sm:w-40 md:w-52" />
         </NavbarBrand>
       </NavbarContent>
 
@@ -58,9 +62,11 @@ function Header() {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
+            radius="sm"
             as={NextUI_Link}
             href="/join"
-            className="text-white bg-light-green font-bold px-9 py-6"
+            color="success"
+            className="font-bold text-xs md:text-base px-4 py-3 md:px-9 md:py-6"
           >
             Join for Free
           </Button>
@@ -72,7 +78,6 @@ function Header() {
           <NavbarMenuItem key={index}>
             <NextUI_Link
               className="w-full text-dark-green"
-              // color="foreground"
               to={"/" + toKebabCase(menuItem)}
               size="lg"
             >

@@ -3,38 +3,46 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Trap Black";
-  src: url("./assets/font-faces/Trap-Black.otf");
+  font-family: "Trap Light";
+  font-weight: 300;
+  src: url("./assets/font-faces/Trap-Light.otf");
+}
+
+@font-face {
+  font-family: "Trap Regular";
+  font-weight: 400;
+  src: url("./assets/font-faces/Trap-Regular.otf");
+}
+
+@font-face {
+  font-family: "Trap Medium";
+  font-weight: 500;
+  src: url("./assets/font-faces/Trap-Medium.otf");
+}
+
+@font-face {
+  font-family: "Trap SemiBold";
+  font-weight: 600;
+  src: url("./assets/font-faces/Trap-SemiBold.otf");
+
 }
 
 @font-face {
   font-family: "Trap Bold";
+  font-weight: 700;
   src: url("./assets/font-faces/Trap-Bold.otf");
 }
 
 @font-face {
   font-family: "Trap ExtraBold";
+  font-weight: 800;
   src: url("./assets/font-faces/Trap-ExtraBold.otf");
 }
 
 @font-face {
-  font-family: "Trap Light";
-  src: url("./assets/font-faces/Trap-Light.otf");
-}
-
-@font-face {
-  font-family: "Trap Medium";
-  src: url("./assets/font-faces/Trap-Medium.otf");
-}
-
-@font-face {
-  font-family: "Trap Regular";
-  src: url("./assets/font-faces/Trap-Regular.otf");
-}
-
-@font-face {
-  font-family: "Trap SemiBold";
-  src: url("./assets/font-faces/Trap-SemiBold.otf");
+  font-family: "Trap Black";
+  font-weight: 900;
+  src: url("./assets/font-faces/Trap-Black.otf");
 }
 
 html {
