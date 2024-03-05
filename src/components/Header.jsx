@@ -12,6 +12,7 @@ import {
 } from "@nextui-org/react";
 import Logo from "../assets/Logo";
 import { toKebabCase } from "../utils/case-converter";
+import { Link } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -50,8 +51,9 @@ function Header() {
         {menuItems.map((menuItem, index) => (
           <NavbarItem key={index}>
             <NextUI_Link
+              as={Link}
+              to={"/" + toKebabCase(menuItem)}
               className="text-dark-green"
-              href={"/" + toKebabCase(menuItem)}
             >
               {menuItem}
             </NextUI_Link>
@@ -63,8 +65,8 @@ function Header() {
         <NavbarItem>
           <Button
             radius="sm"
-            as={NextUI_Link}
-            href="/join"
+            as={Link}
+            to="/join"
             color="success"
             className="font-bold text-xs md:text-base px-4 py-3 md:px-9 md:py-6"
           >

@@ -73,7 +73,8 @@ function Footer() {
               {menuItems[1].items.map((item, index) => (
                 <li key={index}>
                   <NextUI_Link
-                    href={item.link}
+                    as={Link}
+                    to={item.link}
                     className="text-base font-normal font-trap-regular leading-relaxed text-neutral-400"
                   >
                     {item.name}
@@ -90,7 +91,10 @@ function Footer() {
               {menuItems[2].items.map((item, index) => (
                 <li key={index}>
                   <NextUI_Link
-                    href={item.link}
+                    as={Link}
+                    to={item.link}
+                    isExternal
+                    showAnchorIcon
                     className="text-base font-normal font-trap-regular leading-relaxed text-neutral-400"
                   >
                     {item.name}
@@ -110,13 +114,15 @@ function Footer() {
           </div>
           <div className="w-1/3 flex gap-x-4">
             <NextUI_Link
-              href="/terms-conditions"
+              as={Link}
+              to="/terms-conditions"
               className="text-neutral-400 text-sm text-center"
             >
               Terms & Conditions
             </NextUI_Link>
             <NextUI_Link
-              href="/privacy"
+              as={Link}
+              to="/privacy"
               className="text-neutral-400 text-sm text-center"
             >
               Privacy Policy

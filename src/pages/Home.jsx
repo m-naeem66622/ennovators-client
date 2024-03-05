@@ -1,8 +1,9 @@
-import { Button, Image, Link as NextUI_Link } from "@nextui-org/react";
+import { Button, Image } from "@nextui-org/react";
 import Section from "../components/Section";
 import React from "react";
 import Text from "../components/Text";
 import Image_1 from "../assets/boy_with_thumbsup.jpg";
+import { Link } from "react-router-dom";
 
 function Home() {
   const teamMembers = [
@@ -40,8 +41,8 @@ function Home() {
           morbi a nisl morbi ut.
         </Text>
         <Button
-          as={NextUI_Link}
-          href="/join"
+          as={Link}
+          to="/join"
           radius="sm"
           color="success"
           className="text-base font-bold px-10 py-7 mt-16"
@@ -68,8 +69,8 @@ function Home() {
             take pride in doing their best to please you.
           </Text>
           <Button
-            as={NextUI_Link}
-            href="/join"
+            as={Link}
+            to="/join"
             radius="sm"
             color="success"
             className="text-base font-bold px-10 py-7 mt-6"
